@@ -1,0 +1,39 @@
+<html>
+<head>
+<title> Activity Tracker </title>
+<head>
+<body>
+<h1> Activity Tracker </h1>
+
+
+
+<textarea id="Activity" rows="4" cols="50" placeholder="Enter text here...">
+</textarea>
+<br>
+<button onclick="displayOnPage()">Display Text</button>
+<button onclick="clearAll()">Reset</button>
+<button onclick="window.print()">Print this page</button>
+
+</br>
+<p id = "page"></p>
+</body>
+<script>
+
+var date;
+function clearAll() {
+document.getElementById("page").innerHTML ="";
+}
+function displayOnPage() {
+date= new Date();
+var activity = document.getElementById("Activity").value;
+var outputActivity = document.createElement("p");
+outputActivity.innerText = date.toLocaleDateString() + " " + date.toLocaleTimeString() + " "+ activity;
+document.getElementById("page").appendChild(outputActivity);
+document.getElementById("Activity").value="";
+}
+
+</script>
+
+
+
+</html>
