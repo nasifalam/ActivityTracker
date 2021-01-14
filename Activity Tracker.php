@@ -23,10 +23,6 @@
 date_default_timezone_set("America/New_York");
 $datenow= date("Y-m-d");
 $timenow=date("H:i A");
-echo "Today is " . date("Y/m/d") . "<br>";
-echo "Today is " . date("Y.m.d") . "<br>";
-echo "Today is " . $datenow . "<br>";
-echo "Today is " . date("l");
 ?>
 
 <table class="table">
